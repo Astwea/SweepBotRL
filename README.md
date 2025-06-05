@@ -1,7 +1,7 @@
 # SweepBotRL
 
 **SweepBotRL** is a full-stack autonomous cleaning robot system built on a differential-drive platform. It combines high-performance reinforcement learning training, multi-agent simulation, embedded control firmware, and ROS 2 integration for real-world deployment.
-
+📖 [点击查看中文版说明](./README_CN.md)
 ---
 
 ## 🚀 Features
