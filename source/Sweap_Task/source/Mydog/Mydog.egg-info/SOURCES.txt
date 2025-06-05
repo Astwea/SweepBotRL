@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+Mydog/__init__.py
+Mydog/ui_extension_example.py
+Mydog.egg-info/PKG-INFO
+Mydog.egg-info/SOURCES.txt
+Mydog.egg-info/dependency_links.txt
+Mydog.egg-info/not-zip-safe
+Mydog.egg-info/requires.txt
+Mydog.egg-info/top_level.txt
