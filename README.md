@@ -24,10 +24,8 @@ SweepBotRL/
 │       ├── tasks/direct/mydog_marl/         # Custom IsaacLab env
 ├── firmware/           # STM32Cube HAL/FreeRTOS firmware
 ├── ros2_ws/            # ROS 2 workspace and nodes
-├── configs/            # RL configuration YAMLs
 ├── scripts/            # Training, evaluation, model conversion
-├── docs/               # Architecture, hardware design, communication protocol
-├── requirements.txt
+├── Docs/               # Architecture, hardware design, communication protocol
 ├── README.md
 ├── LICENSE
 └── .gitignore
@@ -38,11 +36,7 @@ SweepBotRL/
 ## 🧠 Training the RL Agent
 
 1. Clone IsaacLab and follow setup instructions  
-2. Clone this repo and install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+2. Clone this repo and install any Python dependencies required by IsaacLab and rl-games.
 
 3. Start training:
 
@@ -55,9 +49,9 @@ python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 
 ## 🤖 Deploying to Hardware
 
-- Use STM32CubeIDE to open `firmware/STM32_Project`
+- Use STM32CubeIDE to open `firmware/pwm_test.ioc`
 - Compile and flash to the robot controller board
-- Use ROS 2 nodes under `ros2_ws/src/mydog_ros2/` for command bridging
+- Use ROS 2 packages under `ros2_ws/src/run_saodi/` and `ros2_ws/src/wit_ros2_imu/` for hardware integration
 
 ---
 
@@ -65,7 +59,8 @@ python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 
 - `cmd_vel` for velocity control  
 - `laser_scan` or `odom` as optional inputs  
-- Launch file: `ros2 launch mydog_ros2 bringup.launch.py`
+- Launch file: `ros2 launch run_saodi start_robot.launch.py`
+- IMU launch: `ros2 launch wit_ros2_imu imu.launch.py`
 
 ---
 
