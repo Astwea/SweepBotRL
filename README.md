@@ -48,7 +48,8 @@ pip install -r requirements.txt
 3. Start training:
 
 ```bash
-python scripts/train.py
+cd source/Sweap_Task
+python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 ```
 
 ---
