@@ -24,7 +24,6 @@ SweepBotRL/
 ├── source/              # 强化学习环境、控制逻辑与仿真配置
 │   └── Mydog/
 │       ├── tasks/direct/mydog_marl/         # 自定义 IsaacLab 环境
-│       └── control/                         # 嵌入式 PID 控制逻辑
 ├── firmware/           # STM32Cube HAL/FreeRTOS 固件工程
 ├── ros2_ws/            # ROS 2 工作空间与节点
 ├── configs/            # RL 训练相关 YAML 配置
