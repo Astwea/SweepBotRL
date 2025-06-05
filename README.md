@@ -52,6 +52,36 @@ python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 - Use STM32CubeIDE to open `firmware/pwm_test.ioc`
 - Compile and flash to the robot controller board
 - Use ROS 2 packages under `ros2_ws/src/run_saodi/` and `ros2_ws/src/wit_ros2_imu/` for hardware integration
+- See [Docs/firmware.md](Docs/firmware.md) for a full firmware build guide
+
+---
+
+## 🛠️ Building the ROS 2 Workspace
+
+1. Install ROS 2 Humble and source the environment:
+
+   ```bash
+   source /opt/ros/humble/setup.bash
+   ```
+
+2. Install package dependencies with `rosdep`:
+
+   ```bash
+   cd ros2_ws
+   rosdep install --from-paths src -r -y
+   ```
+
+3. Build the workspace using `colcon`:
+
+   ```bash
+   colcon build
+   ```
+
+4. Source the workspace before running the nodes:
+
+   ```bash
+   source install/setup.bash
+   ```
 
 ---
 
