@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ÂµVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: É­ ÁÖ, È¥1, LIC=C0D74-F84S7-VHU8L-08XLI-04QU8-QCSFZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Essential  Version: 5.36.0.0
+Toolchain Path:  E:\keilv5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+F:\stm32\pwm_test\MDK-ARM\pwm_test.uvprojx
+Project File Date:  05/14/2025
+
+<h2>Output:</h2>
+  
+Warning: *** SUPPORT EXPIRED, NEW PRODUCT SERIAL NUMBER REQUIRED ***
+         *** Running with Code Size Limit: 32K                   ***
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\keilv5\ARM\ARMCC\Bin'
+Build target 'pwm_test'
+compiling freertos.c...
+../Core/Src/freertos.c(265): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *restrict"
+  				printf(Buffer);
+../Core/Src/freertos.c(272): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *restrict"
+  								int num_items = sscanf(&Buffer[i+1], "%f %f %d %d", &v, &w,&xi, &sao);
+../Core/Src/freertos.c(319): warning:  #223-D: function "memset" declared implicitly
+  				memset(Buffer, 0, sizeof(Buffer));	
+../Core/Src/freertos.c(435): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  			OLED_ShowString(0, 0,  str, 12);
+../Core/Src/freertos.c(438): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  			OLED_ShowString(80, 20,  str, 12);
+../Core/Src/freertos.c(441): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  			OLED_ShowString(80, 30, str,12);
+../Core/Src/freertos.c(444): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  			OLED_ShowString(80, 40, str,12);
+../Core/Src/freertos.c(451): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  			OLED_ShowString(0, 0,  str, 12);
+../Core/Src/freertos.c(491): warning:  #223-D: function "memcpy" declared implicitly
+          memcpy(&tx_Buffer[index], &motor1.speed, sizeof(motor1.speed)); index += sizeof(motor1.speed);
+../Core/Src/freertos.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=47424 RO-data=10592 RW-data=348 ZI-data=14916  
+FromELF: creating hex file...
+"pwm_test\pwm_test.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.1.1.0.pack
+                Keil.STM32F1xx_DFP.1.1.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_pwm_test
+  E:\keilv5\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  E:\keilv5\Keil\STM32F1xx_DFP\1.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
