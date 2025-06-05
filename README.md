@@ -22,7 +22,6 @@ SweepBotRL/
 ├── source/              # RL environment, simulation and control logic
 │   └── Mydog/
 │       ├── tasks/direct/mydog_marl/         # Custom IsaacLab env
-│       └── control/                         # Embedded PID control logic
 ├── firmware/           # STM32Cube HAL/FreeRTOS firmware
 ├── ros2_ws/            # ROS 2 workspace and nodes
 ├── configs/            # RL configuration YAMLs
