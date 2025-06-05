@@ -26,10 +26,8 @@ SweepBotRL/
 │       ├── tasks/direct/mydog_marl/         # 自定义 IsaacLab 环境
 ├── firmware/           # STM32Cube HAL/FreeRTOS 固件工程
 ├── ros2_ws/            # ROS 2 工作空间与节点
-├── configs/            # RL 训练相关 YAML 配置
 ├── scripts/            # 训练、评估、模型转换脚本
-├── docs/               # 系统结构、电路说明、通信协议文档
-├── requirements.txt
+├── Docs/               # 系统结构、电路说明、通信协议文档
 ├── README.md
 ├── LICENSE
 └── .gitignore
@@ -40,11 +38,7 @@ SweepBotRL/
 ## 🧠 训练机器人策略
 
 1. 克隆 IsaacLab 并完成依赖配置  
-2. 克隆本仓库并安装依赖：
-
-```bash
-pip install -r requirements.txt
-```
+2. 克隆本仓库并安装 IsaacLab 与 rl-games 所需的 Python 依赖。
 
 3. 开始训练：
 
@@ -57,9 +51,9 @@ python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 
 ## 🤖 部署到实体机器人
 
-- 使用 STM32CubeIDE 打开 `firmware/STM32_Project`
+- 使用 STM32CubeIDE 打开 `firmware/pwm_test.ioc`
 - 编译并烧录至控制板
-- 使用 ROS 2 启动 `ros2_ws/src/mydog_ros2/` 中的控制节点
+- 运行 `ros2_ws/src/run_saodi/` 与 `ros2_ws/src/wit_ros2_imu/` 中的 ROS 2 程序
 
 ---
 
@@ -67,7 +61,8 @@ python scripts/rl_games/train.py --task=Template-Mydog-Marl-Direct-v0
 
 - `cmd_vel` 控制线速度与角速度  
 - 可选传感器：`laser_scan` 或 `odom`  
-- 启动指令：`ros2 launch mydog_ros2 bringup.launch.py`
+- 启动指令：`ros2 launch run_saodi start_robot.launch.py`
+- IMU 启动：`ros2 launch wit_ros2_imu imu.launch.py`
 
 ---
 
